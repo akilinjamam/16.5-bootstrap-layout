@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo element</title>
+
+    <style>
+        h1::before {
+            content: 'hellow';
+            color: lime;
+        }
+
+        h1::after {
+            content: 'gelo';
+            color: limegreen;
+        }
+
+        blockquote::before {
+            content: open-quote;
+            color: magenta;
+            font-size: 1.5em;
+        }
+
+        blockquote::after {
+            content: close-quote;
+            color: magenta;
+            font-size: 1.5em;
+        }
+
+        .section-title::after,
+        .section-title:hover::before {
+            content: '';
+            background-color: magenta;
+            width: 100%;
+            display: block;
+            height: 2px;
+        }
+
+
+
+        .section-title {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>having fun with pseudo pseudo vai bon</h1>
+    <h1>having fun with bondhu bandhobi</h1>
+
+    <section>
+        <h2 class="section-title">this is some important inspiring quots</h2>
+        <blockquote>
+            The best decisions aren’t made with your mind, but with your instincts
+        </blockquote>
+    </section>
+</body>
+
+</html>
